@@ -47,6 +47,9 @@ python train_dataset.py --num-shards 170 --data-dir data
 ```bash
 python train_base.py --model d12 --input-dir data --max-steps 1000 --log-dir logs
 ```
+```bash
+python train_base.py --model d12 --input-dir data --output-dir checkpoints --max-steps 32000 --warmup-iters 300 --final-lr-frac 0.1 --val-loss-every 500 --val-max-steps 40 --sample-every 500 --checkpoint-every 2000 --log-dir logs
+```
 
 Model size is picked via `--model`:
 
